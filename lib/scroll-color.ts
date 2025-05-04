@@ -14,8 +14,8 @@ export function initScrollColorChange() {
 
     return ScrollTrigger.create({
       trigger: section,
-      start: "top 100%", // Start when the section is 50% in view
-      end: "bottom 100%", // End when the section is 50% out of view
+      start: "top 50%", // Start when the section is 50% in view
+      end: "bottom 50%", // End when the section is 50% out of view
       onEnter: () => {
         gsap.to("body", {
           backgroundColor: section.dataset.bgcolor,

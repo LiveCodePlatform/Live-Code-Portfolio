@@ -186,7 +186,7 @@ export default function TestimonialSection() {
       data-bgcolor="#ffffff"
       data-textcolor="#000000"
     >
-      <div className="text-black">
+      <div className="">
         <div className="w-full">
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center mb-8">
             <div>
@@ -213,7 +213,7 @@ export default function TestimonialSection() {
           </div>
 
           {/* Slider */}
-          <div className="testimonial-slider ps-40 mt-10">
+          <div className="testimonial-slider ps-40 mt-10 text-black">
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-3">

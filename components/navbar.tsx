@@ -84,9 +84,9 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/home"
+              href="/about"
               className={`font-medium transition-colors ${
-                isActive("/home")
+                isActive("/about")
                   ? "text-primary"
                   : isDarkSection
                   ? "text-white hover:text-primary"
@@ -162,21 +162,9 @@ export default function Navbar() {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`py-2 font-medium transition-colors ${
-                isActive("/about")
-                  ? "text-primary"
-                  : isDarkSection
-                  ? "text-white hover:text-primary"
-                  : "text-black hover:text-primary"
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
               About Live Code
             </Link>
+
             <Link
               href="/contact"
               className={`py-2 font-medium transition-colors ${

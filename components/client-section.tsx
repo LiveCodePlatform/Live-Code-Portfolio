@@ -1,25 +1,26 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Image from "next/image"
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import { Button } from "./ui/button";
 
 const clients = [
-  { id: 1, name: "Client 1" },
+  { id: 1, name: "Client 1", image: "" },
   { id: 2, name: "Client 2" },
   { id: 3, name: "Client 3" },
   { id: 4, name: "Client 4" },
   { id: 5, name: "Client 5" },
   { id: 6, name: "Client 6" },
-]
+];
 
 export default function ClientSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const clientsRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
+  const clientsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
 
     // Animate clients on scroll
     if (clientsRef.current) {
@@ -33,29 +34,25 @@ export default function ClientSection() {
           start: "top 80%",
           toggleActions: "play none none none",
         },
-      })
+      });
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
-  }, [])
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="section py-16 border-t border-slate-200"
+      className="section py-24 mt-24"
       data-bgcolor="#ffffff"
       data-textcolor="#000000"
     >
-      <div className="container mx-auto px-4">
-        <h2 className="text-xl md:text-2xl font-medium text-center mb-12 text-slate-600">
-          Trusted by industry-leading companies
-        </h2>
-
+      <div className="container mx-auto px-4 flex">
         <div
           ref={clientsRef}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center"
+          className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center w-1/2"
         >
           {clients.map((client) => (
             <div
@@ -63,16 +60,25 @@ export default function ClientSection() {
               className="w-full max-w-[140px] grayscale hover:grayscale-0 transition-all duration-300"
             >
               <Image
-                src="/placeholder.svg?height=60&width=140"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILstzE4n4jxRaa2LcTb5Uf_JKLVtXIZjL3w&s"
                 alt={client.name}
                 width={140}
-                height={60}
-                className="object-contain h-12"
+                height={140}
+                className="object-contain"
               />
             </div>
           ))}
         </div>
+
+        <div className="w-1/2 flex justify-center items-center">
+          <div>
+            <p className="text-primary font-semibold text-[36px] mb-5">
+              Trusted by Growing <br /> Facebook Shops <br /> Across Myanmar
+            </p>
+            <Button>Get Started</Button>
+          </div>
+        </div>
       </div>
     </section>
-  )
+  );
 }

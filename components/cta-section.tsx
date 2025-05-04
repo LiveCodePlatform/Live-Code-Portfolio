@@ -42,7 +42,7 @@ export default function CTASection() {
       data-textcolor="#000000"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#151515] to-[#151515]"></div>
 
       {/* Background shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
