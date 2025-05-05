@@ -112,7 +112,7 @@ export default function ProductFeatures() {
       >
         <div
           ref={indicatorsRef}
-          className="absolute bg-red-500 text-center top-20 w-full left-1/2 transform -translate-x-1/2 space-x-10"
+          className="absolute text-center top-20 w-full left-1/2 transform -translate-x-1/2 space-x-10"
         >
           {features.map((_, index) => (
             <button key={index}>
