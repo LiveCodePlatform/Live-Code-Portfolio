@@ -112,7 +112,7 @@ export default function ProductFeatures() {
       >
         <div
           ref={indicatorsRef}
-          className="absolute top-28 left-1/2 transform -translate-x-1/2 space-x-10"
+          className="absolute bg-red-500 text-center top-20 w-full left-1/2 transform -translate-x-1/2 space-x-10"
         >
           {features.map((_, index) => (
             <button key={index}>
@@ -129,7 +129,7 @@ export default function ProductFeatures() {
         </div>
         <div
           ref={featuresRef}
-          className="absolute top-20 left-0 flex items-center h-full"
+          className="absolute top-28 left-0 flex items-center h-full"
           style={{ width: "400%" }}
         >
           {features.map((feature) => (
@@ -139,11 +139,6 @@ export default function ProductFeatures() {
             >
               <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6 order-2">
-                  {/* <div
-                    className={`inline-block p-3 rounded-full bg-slate-800 ${feature.color}`}
-                  >
-                    <feature.icon className="w-8 h-8" />
-                  </div> */}
                   <h3 className="text-[22px] font-bold text-white">
                     {feature.title}
                   </h3>

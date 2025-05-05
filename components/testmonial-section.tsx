@@ -186,9 +186,9 @@ export default function TestimonialSection() {
       data-bgcolor="#ffffff"
       data-textcolor="#000000"
     >
-      <div className="">
+      <div className="container mx-auto">
         <div className="w-full">
-          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center mb-8">
+          <div className=" flex flex-col md:flex-row justify-between items-center mb-8">
             <div>
               <h2 className=" text-3xl md:text-4xl font-bold">
                 What our customers are saying
@@ -213,11 +213,11 @@ export default function TestimonialSection() {
           </div>
 
           {/* Slider */}
-          <div className="testimonial-slider ps-40 mt-10 text-black">
+          <div className="testimonial-slider mt-10  text-black">
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-3">
-                  <div className="bg-white rounded-xl shadow-sm p-6 w-[300px] flex flex-col border border-slate-100 mx-2">
+                  <div className="bg-white rounded-xl shadow-lg p-6 w-[300px] flex flex-col border border-slate-200 mx-2">
                     <div className="mb-4">{testimonial.icon}</div>
                     <p className="text-[18px] mb-6 flex-grow">
                       "{testimonial.content}"
