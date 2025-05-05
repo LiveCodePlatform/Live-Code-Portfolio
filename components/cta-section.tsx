@@ -38,11 +38,11 @@ export default function CTASection() {
     <section
       ref={sectionRef}
       className="section pt-24 md:pt-32 relative overflow-hidden"
-      data-bgcolor="#ffffff"
-      data-textcolor="#000000"
+      data-bgcolor="#151515"
+      data-textcolor="#ffffff"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#151515] to-[#151515]"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-[#151515] to-[#151515]"></div> */}
 
       {/* Background shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">

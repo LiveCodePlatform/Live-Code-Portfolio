@@ -51,7 +51,7 @@ export default function ClientSection() {
     >
       <div className="container mx-auto px-4 flex">
         <div
-          ref={clientsRef}
+          // ref={clientsRef}
           className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center w-1/2"
         >
           {clients.map((client) => (

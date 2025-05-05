@@ -96,9 +96,9 @@ export default function Navbar() {
               About Live Code
             </Link>
             <Link
-              href="/about"
+              href="/feature"
               className={`font-medium transition-colors ${
-                isActive("/about")
+                isActive("/feature")
                   ? "text-primary"
                   : isDarkSection
                   ? "text-white hover:text-primary"
@@ -106,6 +106,18 @@ export default function Navbar() {
               }`}
             >
               Features
+            </Link>
+            <Link
+              href="/plan"
+              className={`font-medium transition-colors ${
+                isActive("/plan")
+                  ? "text-primary"
+                  : isDarkSection
+                  ? "text-white hover:text-primary"
+                  : "text-black hover:text-primary"
+              }`}
+            >
+              Packages
             </Link>
             <Link
               href="/contact"
@@ -117,7 +129,7 @@ export default function Navbar() {
                   : "text-black hover:text-primary"
               }`}
             >
-              Packages
+              Contact
             </Link>
             <Button>Get Started</Button>
           </nav>
@@ -166,9 +178,9 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/contact"
+              href="/feature"
               className={`py-2 font-medium transition-colors ${
-                isActive("/contact")
+                isActive("/feature")
                   ? "text-primary"
                   : isDarkSection
                   ? "text-white hover:text-primary"
@@ -177,6 +189,19 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Features
+            </Link>
+            <Link
+              href="/plan"
+              className={`py-2 font-medium transition-colors ${
+                isActive("/plan")
+                  ? "text-primary"
+                  : isDarkSection
+                  ? "text-white hover:text-primary"
+                  : "text-black hover:text-primary"
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Packages
             </Link>
             <Link
               href="/contact"
@@ -189,7 +214,7 @@ export default function Navbar() {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Packages
+              Contact
             </Link>
             <Button className="w-full">Get Started</Button>
           </div>
