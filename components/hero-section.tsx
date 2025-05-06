@@ -47,7 +47,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="section min-h-screen flex items-center pt-20 relative overflow-hidden"
+      className="section min-h-screen flex items-center pt-40 md:pt-20 relative overflow-hidden"
       data-bgcolor="#ffffff"
       data-textcolor="#000000"
     >

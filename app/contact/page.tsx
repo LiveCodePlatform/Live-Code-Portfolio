@@ -53,7 +53,7 @@ export default function Contact() {
         >
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto px-10 py-10 border border-slate-200 rounded-xl shadow-lg">
-              <div className="flex justify-between items-center gap-20">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-20">
                 <div>
                   <h2 className="text-[32px] font-bold mb-8">
                     Talk with our sale team
@@ -69,7 +69,7 @@ export default function Contact() {
                   </Button>
                 </div>
 
-                <div className="w-1 h-52 bg-primary opacity-25"></div>
+                <div className="hidden md:block w-1 h-52 bg-primary opacity-25"></div>
 
                 <div>
                   <h2 className="text-[32px] font-bold mb-8">

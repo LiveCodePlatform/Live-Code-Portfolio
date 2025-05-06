@@ -187,14 +187,14 @@ export default function TestimonialSection() {
       data-textcolor="#000000"
     >
       <div className="container mx-auto">
-        <div className="w-full">
+        <div className=" md:w-full">
           <div className=" flex flex-col md:flex-row justify-between items-center mb-8">
             <div>
               <h2 className=" text-3xl md:text-4xl font-bold">
                 What our customers are saying
               </h2>
             </div>
-            <div className="flex items-center space-x-4 mt-4 md:mt-0">
+            <div className="hidden md:block flex items-center space-x-4 mt-4 md:mt-0">
               <button
                 onClick={handlePrev}
                 className="p-2 rounded-full border border-gray-500 hover:bg-slate-100 transition-colors shadow-md"
@@ -213,11 +213,11 @@ export default function TestimonialSection() {
           </div>
 
           {/* Slider */}
-          <div className="testimonial-slider mt-10  text-black">
+          <div className="testimonial-slider mt-10 text-black">
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="px-3">
-                  <div className="bg-white rounded-xl shadow-lg p-6 w-[300px] flex flex-col border border-slate-200 mx-2">
+                <div key={testimonial.id} className="px-2 md:px-3">
+                  <div className="bg-white rounded-xl shadow-lg p-6 w-full md:w-[300px] flex flex-col border border-slate-200 md:mx-2">
                     <div className="mb-4">{testimonial.icon}</div>
                     <p className="text-[18px] mb-6 flex-grow">
                       "{testimonial.content}"
@@ -246,7 +246,7 @@ export default function TestimonialSection() {
           </div>
 
           {/* Progress bar */}
-          <div className="container mx-auto h-1 mt-10 bg-slate-200 rounded-full mb-8 overflow-hidden">
+          <div className="container mx-auto h-1 mt-5 md:mt-10 bg-slate-200 rounded-full mb-8 overflow-hidden">
             <div
               className="h-full bg-[#305CDE] rounded-full transition-all duration-300"
               style={{ width: `${normalizedProgress}%` }}

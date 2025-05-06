@@ -10,6 +10,7 @@ import ProductFeatures from "@/components/product-features";
 import CTASection from "@/components/cta-section";
 import { initScrollColorChange } from "@/lib/scroll-color";
 import PricingPlan from "@/components/pricing-plan";
+import ProductFeaturesMobile from "@/components/product-features-mobile";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,7 +36,13 @@ export default function Home() {
 
         <ClientSection />
 
-        <ProductFeatures />
+        <div className="hidden md:block">
+          <ProductFeatures />
+        </div>
+
+        <div className="md:hidden">
+          <ProductFeaturesMobile />
+        </div>
 
         <TestmonialSection />
 

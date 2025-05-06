@@ -164,14 +164,14 @@ export default function FeatureCarousel() {
           <div className="testimonial-slider mt-10 text-black relative">
             <button
               onClick={handlePrev}
-              className="p-2 rounded-full border border-gray-500 bg-white text-blue hover:bg-slate-100 transition-colors shadow-md absolute top-1/3 left-[-5px] z-10 -translate-y-1/2"
+              className="hidden md:block p-2 rounded-full border border-gray-500 bg-white text-blue hover:bg-slate-100 transition-colors shadow-md absolute top-1/3 left-[-5px] z-10 -translate-y-1/2"
               aria-label="Previous testimonials"
             >
               <ChevronLeft className="w-8 h-8 " />
             </button>
             <button
               onClick={handleNext}
-              className="p-2 rounded-full border border-gray-500 bg-white text-blue hover:bg-slate-100 transition-colors shadow-md absolute top-1/3 right-[-15px] z-10 -translate-y-1/2"
+              className="hidden md:block p-2 rounded-full border border-gray-500 bg-white text-blue hover:bg-slate-100 transition-colors shadow-md absolute top-1/3 right-[-15px] z-10 -translate-y-1/2"
               aria-label="Next testimonials"
             >
               <ChevronRight className="w-8 h-8" />
@@ -179,15 +179,17 @@ export default function FeatureCarousel() {
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-3">
-                  <div className="bg-white rounded-xl shadow-sm px-10 py-10 w-full flex items-center border border-slate-100 mx-2">
-                    <div className="w-2/3 px-10">
-                      <h1 className="text-[48px] font-bold mb-2">
+                  <div className="bg-white rounded-xl shadow-sm px-5 md:px-10 py-10 w-full flex flex-col md:flex-row items-center border border-slate-100 mx-2">
+                    <div className="md:w-2/3 md:px-10">
+                      <h1 className="text-[24px] md:text-[32px] lg:text-[48px] font-bold mb-2">
                         {testimonial.name}
                       </h1>
-                      <p className="text-[24px]">"{testimonial.content}"</p>
+                      <p className="text-[18px] lg:text-[24px]">
+                        "{testimonial.content}"
+                      </p>
                     </div>
 
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3">
                       <Image
                         src={testimonial.image || "/placeholder.svg"}
                         alt={testimonial.name}
@@ -198,7 +200,7 @@ export default function FeatureCarousel() {
                     </div>
                   </div>
 
-                  <div className="flex grids grid-cols-3 gap-5 mt-5">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
                     <div className="bg-[#1f1f1f] px-7 py-10 rounded-xl font-semibold">
                       <h1 className="text-white text-[22px] mb-5">
                         Order Tracking

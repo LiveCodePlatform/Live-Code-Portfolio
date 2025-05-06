@@ -49,10 +49,10 @@ export default function ClientSection() {
       data-bgcolor="#ffffff"
       data-textcolor="#000000"
     >
-      <div className="container mx-auto px-4 flex">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row">
         <div
           // ref={clientsRef}
-          className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center w-1/2"
+          className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center md:w-1/2"
         >
           {clients.map((client) => (
             <div
@@ -70,7 +70,7 @@ export default function ClientSection() {
           ))}
         </div>
 
-        <div className="w-1/2 flex justify-center items-center">
+        <div className="md:w-1/2 flex justify-center items-center">
           <div>
             <p className="text-primary font-semibold text-[36px] mb-5">
               Trusted by Growing <br /> Facebook Shops <br /> Across Myanmar

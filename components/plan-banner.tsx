@@ -66,7 +66,7 @@ export default function PlanBanner() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-20">
           {/* Standard Plan */}
-          <div className="bg-white rounded-lg shadow-lg py-8 px-10 h-[390px] border border-gray-200">
+          <div className="bg-white rounded-lg shadow-lg py-8 px-10 md:h-[390px] border border-gray-200">
             <h3 className="text-[36px] font-bold text-primary my-6 inter">
               Standard Plan
             </h3>

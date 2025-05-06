@@ -45,7 +45,7 @@ const features = [
   },
 ];
 
-export default function ProductFeatures() {
+export default function ProductFeaturesMobile() {
   const sectionRef = useRef<HTMLElement>(null);
   const horizontalRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
@@ -89,7 +89,7 @@ export default function ProductFeatures() {
   return (
     <section
       ref={sectionRef}
-      className="section product-features-section py-64"
+      className="section py-64"
       data-bgcolor="#151515"
       data-textcolor="#ffffff"
     >
@@ -106,13 +106,13 @@ export default function ProductFeatures() {
       </div>
 
       <div
-        ref={horizontalRef}
+        // ref={horizontalRef}
         className="relative overflow-hidden"
-        style={{ height: "100vh" }}
+        // style={{ height: "100vh" }}
       >
         <div
-          ref={indicatorsRef}
-          className="absolute mt-5 text-center top-20 w-full left-1/2 transform -translate-x-1/2 space-x-10"
+          // ref={indicatorsRef}
+          className="hidden absolute text-center top-20 w-full left-1/2 transform -translate-x-1/2 space-x-10"
         >
           {features.map((_, index) => (
             <button key={index}>
@@ -128,17 +128,17 @@ export default function ProductFeatures() {
           ))}
         </div>
         <div
-          ref={featuresRef}
-          className="absolute top-28 left-0 flex items-center h-full"
-          style={{ width: "400%" }}
+          // ref={featuresRef}
+          className="flex flex-col items-center h-full space-y-10"
+          // style={{ width: "400%" }}
         >
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="w-screen h-full flex items-center px-4"
+              className="w-screen h-full flex items-center px-10"
             >
-              <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6 order-2">
+              <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+                <div className="space-y-2 order-1">
                   <h3 className="text-[22px] font-bold text-white">
                     {feature.title}
                   </h3>
@@ -149,7 +149,7 @@ export default function ProductFeatures() {
                     {feature.text}
                   </p>
                 </div>
-                <div className="order-1">
+                <div className="order-2">
                   <Image
                     src="/placeholder.svg?height=500&width=500"
                     alt={feature.title}
@@ -168,7 +168,7 @@ export default function ProductFeatures() {
         <blockquote className="mb-20 text-[32px] italic poppins">
           Live Code Myanmar exists to help you Live Easily, Live Better.
         </blockquote>
-        <div className="flex justify-around italic">
+        <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 justify-around italic">
           <div className="flex flex-col items-center">
             <span className="text-[64px] font-bold">1.1 M</span>
             <span className="mt-2 text-[32px]">
