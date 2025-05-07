@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 export default function AboutBanner() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -45,21 +46,24 @@ export default function AboutBanner() {
     <section
       ref={sectionRef}
       className="section min-h-screen flex items-center pt-20 relative overflow-hidden"
-      data-bgcolor="#ffffff"
-      data-textcolor="#000000"
+      data-bgcolor="#151515"
+      data-textcolor="#ffffff"
     >
+      <Image
+        src="/ctabg.svg"
+        alt="About Banner"
+        fill
+        className="object-cover"
+        sizes="100vw"
+      />
       <div className="container mx-auto px-4 min-h-[calc(100vh-12rem)] flex items-center">
-        <div className="max-w-4xl mx-auto text-center" ref={contentRef}>
-          <h1 className="text-4xl md:text-5xl font-semibold">
+        <div className="max-w-5xl mx-auto text-center" ref={contentRef}>
+          <p className="text-4xl md:text-5xl lg:text-[48px] leading-[1.2] font-semibold">
             At Live Code Myanmar, we turn <br /> your facebook live chaos into
             calm
-          </h1>
+          </p>
         </div>
       </div>
-
-      {/* Background shapes */}
-      <div className="absolute top-1/4 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
     </section>
   );
 }

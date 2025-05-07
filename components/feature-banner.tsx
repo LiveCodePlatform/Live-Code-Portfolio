@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 export default function FeatureBanner() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -32,8 +33,15 @@ export default function FeatureBanner() {
       ref={sectionRef}
       className="section min-h-screen flex items-center pt-20 relative overflow-hidden"
       data-bgcolor="#ffffff"
-      data-textcolor="#000000"
+      data-textcolor="#ffffff"
     >
+      <Image
+        src="/ctabg.svg"
+        alt="About Banner"
+        fill
+        className="object-cover"
+        sizes="100vw"
+      />
       <div className="container mx-auto px-4 min-h-[calc(100vh-12rem)] flex items-center">
         <div className="max-w-4xl mx-auto text-center" ref={contentRef}>
           <h1 className="text-4xl md:text-5xl font-semibold">

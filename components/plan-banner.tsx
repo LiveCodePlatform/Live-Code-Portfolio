@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 // Custom list marker component
 const ListMarker = () => (
@@ -49,12 +50,12 @@ export default function PlanBanner() {
   return (
     <section
       ref={sectionRef}
-      className="section flex items-center py-20 relative overflow-hidden"
-      data-bgcolor="#ffffff"
+      className="section flex items-center py-20 md:py-10 relative overflow-hidden"
+      data-bgcolor="#F2F3F7"
       data-textcolor="#000000"
     >
       <div className="container mx-auto px-4 flex flex-col items-center pt-40">
-        <div className="max-w-4xl mx-auto text-center" ref={contentRef}>
+        <div className="max-w-4xl mx-auto md:text-center" ref={contentRef}>
           <h1 className="text-4xl md:text-5xl font-semibold">
             Live Code Myanmar exists to <br /> help you Live Easily, Live
             Better.
@@ -148,8 +149,14 @@ export default function PlanBanner() {
       </div>
 
       {/* Background shapes */}
-      <div className="absolute top-1/4 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+
+      <Image
+        src="/planbg.svg"
+        alt="About Banner"
+        width={1920}
+        height={1080}
+        className="object-cover absolute bottom-0 left-0 w-full z-[-1]"
+      />
     </section>
   );
 }

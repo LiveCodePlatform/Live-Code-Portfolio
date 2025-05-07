@@ -47,48 +47,60 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="section min-h-screen flex items-center pt-40 md:pt-20 relative overflow-hidden"
+      className="section min-h-screen flex items-center relative overflow-hidden"
       data-bgcolor="#ffffff"
       data-textcolor="#000000"
     >
-      <div className="container mx-auto px-4 z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div ref={contentRef} className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight inter">
-              Live Easily, Live <br /> Better with Live <br /> Code Myanmar
-            </h1>
+      <Image
+        src="/planbg.svg"
+        alt="Product showcase"
+        fill
+        sizes="100vw"
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+      />
+      <div className="w-full ">
+        <div className="flex flex-col md:flex-row justify-between w-full">
+          <div
+            ref={contentRef}
+            className="container mx-auto px-4 flex flex-col md:w-1/2 justify-center items-center"
+          >
+            <div className="space-y-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight inter">
+                Live Easily, Live <br /> Better with Live <br /> Code Myanmar
+              </h1>
 
-            <p className="text-lg sm:text-xl text-[#151515] max-w-lg poppins">
-              With a just few simple clicks- mange your live sale stocks, rack
-              live sale orders, save time with our auto replay messages
-            </p>
+              <p className="text-lg sm:text-xl text-[#151515] max-w-lg poppins">
+                With a just few simple clicks- mange your live sale stocks, rack
+                live sale orders, save time with our auto replay messages
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg">
-                Consult with us
-                {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /> */}
-              </Button>
-              <Button size="lg" variant="outline">
-                See our packages
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg">
+                  Consult with us
+                  {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /> */}
+                </Button>
+                <Button size="lg" variant="outline">
+                  See our packages
+                </Button>
+              </div>
             </div>
           </div>
 
-          <div ref={imageRef} className="relative">
+          <div
+            ref={imageRef}
+            className="relative w-1/2 h-[100vh] hidden md:block"
+          >
             <Image
-              src="/placeholder.svg?height=600&width=600"
+              src="/herobanner.svg"
               alt="Product showcase"
-              width={600}
-              height={600}
-              className="rounded-xl shadow-2xl"
+              fill
+              className="object-cover"
             />
           </div>
         </div>
       </div>
 
       {/* Background shapes */}
-      <div className="absolute top-1/4 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
     </section>
   );
 }

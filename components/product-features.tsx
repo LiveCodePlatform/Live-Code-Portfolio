@@ -4,44 +4,35 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { Zap, Shield, Smartphone, Clock } from "lucide-react";
 
 const features = [
   {
     id: 1,
     title: "Stock Management",
+    image: "/feature1.svg",
     description: "Keep your stock list where you can see",
     text: "Store all your stocks in one place and track the list from the most selling product to the least selling one",
-    icon: Zap,
-    color: "text-yellow-500",
-    bgColor: "bg-yellow-500",
   },
   {
     id: 2,
     title: "Customer Management",
+    image: "/feature2.svg",
     description: "Keep your stock list where you can see",
     text: "Store all your stocks in one place and track the list from the most selling product to the least selling one",
-    icon: Shield,
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500",
   },
   {
     id: 3,
     title: "Live Sale",
+    image: "/feature3.svg",
     description: "Keep your stock list where you can see",
     text: "Store all your stocks in one place and track the list from the most selling product to the least selling one",
-    icon: Smartphone,
-    color: "text-blue-500",
-    bgColor: "bg-blue-500",
   },
   {
     id: 4,
     title: "Sale Report",
+    image: "/feature4.svg",
     description: "View report and control your sale",
     text: "Store all your stocks in one place and track the list from the most selling product to the least selling one",
-    icon: Clock,
-    color: "text-purple-500",
-    bgColor: "bg-purple-500",
   },
 ];
 
@@ -118,7 +109,7 @@ export default function ProductFeatures() {
             <button key={index}>
               <p
                 className={`text-white text-[22px] font-bold ${
-                  index === activeSlide ? "text-yellow-500" : ""
+                  index === activeSlide ? "text-[#305CDE]" : ""
                 }`}
               >
                 {" "}
@@ -142,16 +133,16 @@ export default function ProductFeatures() {
                   <h3 className="text-[22px] font-bold text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-[28px] text-slate-300 poppins">
+                  <p className="text-[28px] text-white poppins">
                     {feature.description}
                   </p>
-                  <p className="text-[16px] text-slate-300 poppins">
+                  <p className="text-[16px] text-white poppins">
                     {feature.text}
                   </p>
                 </div>
                 <div className="order-1">
                   <Image
-                    src="/placeholder.svg?height=500&width=500"
+                    src={feature.image}
                     alt={feature.title}
                     width={500}
                     height={500}

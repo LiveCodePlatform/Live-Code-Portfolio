@@ -51,10 +51,10 @@ export default function HowWeStarted() {
     >
       <div className="container mx-auto px-4" ref={contentRef}>
         <div
-          className="flex gap-4 items-center max-w-4xl mx-auto mb-4"
+          className="flex flex-col md:flex-row gap-4 items-center max-w-4xl mx-auto mb-4"
           //   ref={imageRef}
         >
-          <div className="relative w-2/5 h-80 rounded-xl overflow-hidden">
+          <div className="relative w-full md:w-2/5 h-80 rounded-xl overflow-hidden">
             <Image
               src="/placeholder.svg?height=500&width=500"
               alt="Our journey"
@@ -62,7 +62,7 @@ export default function HowWeStarted() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-3/5 h-80 rounded-xl overflow-hidden">
+          <div className="relative w-full md:w-3/5 h-80 rounded-xl overflow-hidden">
             <Image
               src="/placeholder.svg?height=500&width=500"
               alt="Our journey"
@@ -71,10 +71,7 @@ export default function HowWeStarted() {
             />
           </div>
         </div>
-        <div
-          className="relative max-w-4xl mx-auto h-80 rounded-xl overflow-hidden"
-          //   ref={imageRef}
-        >
+        <div className="hidden md:block relative max-w-4xl mx-auto h-80 rounded-xl overflow-hidden">
           <Image
             src="/placeholder.svg?height=500&width=500"
             alt="Our journey"
@@ -102,6 +99,14 @@ export default function HowWeStarted() {
               Sales, saving you time, cutting costs, and reducing errors.
             </p>
           </div>
+        </div>
+        <div className="md:hidden mt-10 relative max-w-4xl mx-auto h-80 rounded-xl overflow-hidden">
+          <Image
+            src="/placeholder.svg?height=500&width=500"
+            alt="Our journey"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     </section>

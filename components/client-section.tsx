@@ -45,15 +45,22 @@ export default function ClientSection() {
   return (
     <section
       ref={sectionRef}
-      className="section py-24 mt-24"
+      className="section"
       data-bgcolor="#ffffff"
       data-textcolor="#000000"
     >
-      <div className="container mx-auto px-4 flex flex-col md:flex-row">
-        <div
-          // ref={clientsRef}
-          className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center md:w-1/2"
-        >
+      <div className="mt-[-5px]">
+        <div className="w-full">
+          <Image
+            src="/patanar.svg"
+            alt="Full width image"
+            layout="responsive"
+            width={1920} // your image's original width
+            height={1080} // your image's original height
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+        <div className="container pt-10 mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {clients.map((client) => (
             <div
               key={client.id}
@@ -68,15 +75,6 @@ export default function ClientSection() {
               />
             </div>
           ))}
-        </div>
-
-        <div className="md:w-1/2 flex justify-center items-center">
-          <div>
-            <p className="text-primary font-semibold text-[36px] mb-5">
-              Trusted by Growing <br /> Facebook Shops <br /> Across Myanmar
-            </p>
-            <Button>Get Started</Button>
-          </div>
         </div>
       </div>
     </section>

@@ -11,9 +11,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#151515] text-white py-8">
+    <footer className="bg-[#151515] text-white py-24">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="mb-6 md:mb-0">
             <Image src="logo.svg" alt="Logo" width={150} height={100} />
             <h3 className="text-[24px] font-medium poppins mt-5">
@@ -21,35 +21,35 @@ export default function Footer() {
             </h3>
           </div>
 
-          <div className="space-y-4 md:space-y-4">
+          <div className="space-y-10 md:space-y-4 w-full md:w-auto">
             <nav className="flex flex-col md:flex-row gap-4 md:gap-8">
               <Link
-                href="#"
+                href="/about"
                 className="text-white hover:text-gray-300 font-medium text-[14px] transition-colors"
               >
                 About Live Code
               </Link>
               <Link
-                href="#"
+                href="/features"
                 className="text-white hover:text-gray-300 font-medium text-[14px] transition-colors"
               >
                 Features
               </Link>
               <Link
-                href="#"
+                href="/packages"
                 className="text-white hover:text-gray-300 font-medium text-[14px] transition-colors"
               >
                 Packages
               </Link>
               <Link
-                href="#"
+                href="/contact"
                 className="text-white hover:text-gray-300 font-medium text-[14px] transition-colors"
               >
                 Contact
               </Link>
             </nav>
 
-            <div className="flex justify-center md:justify-between space-x-4">
+            <div className="flex justify-between space-x-4">
               <Link
                 href="#"
                 className="border border-white p-1 w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"

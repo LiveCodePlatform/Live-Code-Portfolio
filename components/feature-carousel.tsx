@@ -15,16 +15,7 @@ const testimonials = [
     company: "TechCorp",
     content:
       "Store all your stocks in one place and track the list from the most selling product to the least selling one",
-    image: "/feature.svg",
-    icon: (
-      <Image
-        src="/placeholder.svg?height=24&width=24"
-        alt="Icon"
-        width={24}
-        height={24}
-        className="rounded-md"
-      />
-    ),
+    image: "/feature1.svg",
   },
   {
     id: 2,
@@ -32,48 +23,21 @@ const testimonials = [
     company: "DataDrive Solutions",
     content:
       "Track all of your product list from live sales and mange the stock control of your business",
-    image: "/feature.svg",
-    icon: (
-      <Image
-        src="/feature.svg"
-        alt="Icon"
-        width={24}
-        height={24}
-        className="rounded-md"
-      />
-    ),
+    image: "/feature2.svg",
   },
   {
     id: 3,
     name: "Live Sale Code",
     company: "Creative Studios",
     content: "Auto-generated types keep everything working as expected.",
-    image: "/placeholder.svg?height=60&width=60&text=AR",
-    icon: (
-      <Image
-        src="/placeholder.svg?height=24&width=24"
-        alt="Icon"
-        width={24}
-        height={24}
-        className="rounded-md"
-      />
-    ),
+    image: "/feature3.svg",
   },
   {
     id: 4,
     name: "Stock Left  Update",
     company: "InnovateCo",
     content: "Validate content structure before shipping live.",
-    image: "/placeholder.svg?height=60&width=60&text=EC",
-    icon: (
-      <Image
-        src="/placeholder.svg?height=24&width=24"
-        alt="Icon"
-        width={24}
-        height={24}
-        className="rounded-md"
-      />
-    ),
+    image: "/feature4.svg",
   },
 ];
 
@@ -110,39 +74,7 @@ export default function FeatureCarousel() {
     beforeChange: (oldIndex: number, newIndex: number) => {
       setCurrentSlide(newIndex);
     },
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 640,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
-    // onReInit: () => {
-    //   // Update slidesToShow based on current settings
-    //   if (window.innerWidth < 640) {
-    //     setSlidesToShow(1);
-    //   } else if (window.innerWidth < 1024) {
-    //     setSlidesToShow(2);
-    //   } else {
-    //     setSlidesToShow(3);
-    //   }
-    // },
   };
-
-  // Calculate progress percentage
-  //   const progressPercentage =
-  //     ((currentSlide + slidesToShow) / testimonials.length) * 100;
-  // Ensure progress doesn't exceed 100%
-  //   const normalizedProgress = Math.min(progressPercentage, 100);
 
   return (
     <section
@@ -150,7 +82,7 @@ export default function FeatureCarousel() {
       data-bgcolor="#151515"
       data-textcolor="#ffffff"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="w-full">
           <div className=" flex flex-col md:flex-row justify-center items-center mb-20">
             <div>
@@ -180,7 +112,7 @@ export default function FeatureCarousel() {
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-3">
                   <div className="bg-white rounded-xl shadow-sm px-5 md:px-10 py-10 w-full flex flex-col md:flex-row items-center border border-slate-100 mx-2">
-                    <div className="md:w-2/3 md:px-10">
+                    <div className="md:w-2/3 md:px-10 order-2 md:order-1 mt-5 md:mt-0">
                       <h1 className="text-[24px] md:text-[32px] lg:text-[48px] font-bold mb-2">
                         {testimonial.name}
                       </h1>
@@ -189,9 +121,9 @@ export default function FeatureCarousel() {
                       </p>
                     </div>
 
-                    <div className="w-full md:w-1/3">
+                    <div className="w-full md:w-1/3 order-1 md:order-2">
                       <Image
-                        src={testimonial.image || "/placeholder.svg"}
+                        src={testimonial.image}
                         alt={testimonial.name}
                         width={300}
                         height={300}

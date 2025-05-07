@@ -42,6 +42,13 @@ export default function CTASection() {
       data-textcolor="#ffffff"
     >
       {/* Background gradient */}
+      <Image
+        src="/ctabg.svg"
+        alt="CTA Background"
+        fill
+        sizes="100vw"
+        className="absolute top-0 left-0 z-[-1] object-cover"
+      />
       {/* <div className="absolute inset-0 bg-gradient-to-br from-[#151515] to-[#151515]"></div> */}
 
       {/* Background shapes */}
@@ -63,7 +70,7 @@ export default function CTASection() {
               us.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="">
               <Button
                 size="lg"
                 className="bg-white text-black hover:bg-slate-200"

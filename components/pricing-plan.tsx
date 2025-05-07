@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 // Custom list marker component
 const ListMarker = () => (
@@ -22,13 +23,20 @@ const ListMarker = () => (
 export default function PricingPlans() {
   return (
     <section
-      className="py-16 md:py-24"
+      className="py-16 md:py-24 relative"
       data-bgcolor="#ffffff"
       data-textcolor="#ffffff"
     >
-      <div className="container mx-auto px-4 bg-[#5d4037] rounded-2xl py-20">
-        <div className="max-w-5xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-semibold text-white mb-10 inter tracking-wider leading-[2]">
+      <Image
+        fill
+        src="/planbg.svg"
+        sizes="100vw"
+        alt="Plan Background"
+        className="absolute top-0 left-0 z-[-1] object-cover"
+      />
+      <div className="max-w-7xl mx-auto px-5 md:px-10 bg-[#5d4037] rounded-2xl py-20">
+        <div className="max-w-5xl mx-auto md:text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-semibold text-white mb-10 inter">
             Choose the Right Plan <br /> for Your Business
           </h2>
           <p className="text-[22px] text-white font-medium poppins">
@@ -36,9 +44,9 @@ export default function PricingPlans() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-5xl mx-auto">
           {/* Standard Plan */}
-          <div className="bg-white rounded-lg py-8 px-10">
+          <div className="bg-white rounded-lg py-8 px-10 md:h-[390px]">
             <h3 className="text-[36px] font-bold text-primary mb-6 inter">
               Standard Plan
             </h3>
