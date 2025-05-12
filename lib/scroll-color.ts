@@ -21,7 +21,7 @@ export function initScrollColorChange() {
           backgroundColor: section.dataset.bgcolor,
           color:
             section.dataset.textcolor ||
-            (section.dataset.bgcolor === "#151515" ? "#ffffff" : "#151515"),
+            (section.dataset.bgcolor === "#151515" ? "#F2F3F7" : "#151515"),
           duration: 0.5,
           ease: "power2.out",
           overwrite: "auto",
@@ -32,7 +32,7 @@ export function initScrollColorChange() {
           backgroundColor: section.dataset.bgcolor,
           color:
             section.dataset.textcolor ||
-            (section.dataset.bgcolor === "#151515" ? "#ffffff" : "#151515"),
+            (section.dataset.bgcolor === "#151515" ? "#F2F3F7" : "#151515"),
           duration: 0.5,
           ease: "power2.out",
           overwrite: "auto",
@@ -45,7 +45,7 @@ export function initScrollColorChange() {
             color:
               prevSection.dataset.textcolor ||
               (prevSection.dataset.bgcolor === "#151515"
-                ? "#ffffff"
+                ? "#F2F3F7"
                 : "#151515"),
             duration: 0.5,
             ease: "power2.out",

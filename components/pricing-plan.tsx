@@ -23,8 +23,8 @@ const ListMarker = () => (
 export default function PricingPlans() {
   return (
     <section
-      className="py-16 md:py-24 relative"
-      data-bgcolor="#ffffff"
+      className="section pt-20  relative"
+      data-bgcolor="#F2F3F7"
       data-textcolor="#ffffff"
     >
       <Image
@@ -34,7 +34,7 @@ export default function PricingPlans() {
         alt="Plan Background"
         className="absolute top-0 left-0 z-[-1] object-cover"
       />
-      <div className="max-w-7xl mx-auto px-5 md:px-10 bg-[#5d4037] rounded-2xl py-20">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 bg-[#5d4037] rounded-2xl rounded-b-none py-20">
         <div className="max-w-5xl mx-auto md:text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-semibold text-white mb-10 inter">
             Choose the Right Plan <br /> for Your Business
@@ -126,6 +126,13 @@ export default function PricingPlans() {
           </div>
         </div>
       </div>
+      <Image
+        src="/line.svg"
+        alt="Product showcase"
+        width={1920}
+        height={1080}
+        className="w-full h-full object-cover mt-[-2px]"
+      />
     </section>
   );
 }

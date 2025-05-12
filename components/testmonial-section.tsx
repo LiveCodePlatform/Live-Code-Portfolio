@@ -150,7 +150,7 @@ export default function TestimonialSection() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
         },
       },
@@ -183,7 +183,7 @@ export default function TestimonialSection() {
   return (
     <section
       className="py-16 md:py-24"
-      data-bgcolor="#ffffff"
+      data-bgcolor="#F2F3F7"
       data-textcolor="#000000"
     >
       <div className="container mx-auto">
@@ -217,7 +217,7 @@ export default function TestimonialSection() {
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-2 md:px-3">
-                  <div className="bg-white rounded-xl shadow-lg p-6 w-full md:w-[300px] flex flex-col border border-slate-200 md:mx-2">
+                  <div className="bg-white rounded-xl shadow-lg p-6 w-full md:w-[280px] flex flex-col border border-slate-200 md:mx-2">
                     <div className="mb-4">{testimonial.icon}</div>
                     <p className="text-[18px] mb-6 flex-grow">
                       "{testimonial.content}"

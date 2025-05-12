@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { Button } from "./ui/button";
 
 const clients = [
   { id: 1, name: "Client 1", image: "" },
@@ -50,14 +49,18 @@ export default function ClientSection() {
       data-textcolor="#000000"
     >
       <div className="mt-[-5px]">
-        <div className="w-full">
+        <div className="w-full ">
           <Image
-            src="/patanar.svg"
+            src="/clientSection.svg"
             alt="Full width image"
             layout="responsive"
             width={1920} // your image's original width
             height={1080} // your image's original height
-            style={{ width: "100%", height: "auto" }}
+            style={{
+              width: "100%",
+              height: "auto",
+              backgroundColor: "#5D4037",
+            }}
           />
         </div>
         <div className="container pt-10 mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">

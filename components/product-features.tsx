@@ -108,8 +108,10 @@ export default function ProductFeatures() {
           {features.map((_, index) => (
             <button key={index}>
               <p
-                className={`text-white text-[22px] font-bold ${
-                  index === activeSlide ? "text-[#305CDE]" : ""
+                className={`text-[22px] font-bold transition-all duration-300 ${
+                  index === activeSlide
+                    ? "text-[#305CDE]"
+                    : "text-white opacity-50"
                 }`}
               >
                 {" "}

@@ -52,20 +52,20 @@ export default function HeroSection() {
       data-textcolor="#000000"
     >
       <Image
-        src="/planbg.svg"
+        src="/hero-section.svg"
         alt="Product showcase"
         fill
         sizes="100vw"
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        className="absolute top-0 left-0 w-full h-full object-cover  z-[-1]"
       />
       <div className="w-full ">
-        <div className="flex flex-col md:flex-row justify-between w-full">
+        <div className="flex flex-col lg:flex-row justify-between w-full">
           <div
             ref={contentRef}
-            className="container mx-auto px-4 flex flex-col md:w-1/2 justify-center items-center"
+            className="container mx-auto px-4 flex flex-col lg:w-1/2 justify-center items-center"
           >
             <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight inter">
+              <h1 className="text-4xl sm:text-5xl text-[#151515] lg:text-6xl font-bold leading-tight inter">
                 Live Easily, Live <br /> Better with Live <br /> Code Myanmar
               </h1>
 
@@ -86,17 +86,35 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div
+          {/* <div
             ref={imageRef}
-            className="relative w-1/2 h-[100vh] hidden md:block"
-          >
-            <Image
-              src="/herobanner.svg"
-              alt="Product showcase"
-              fill
-              className="object-cover"
-            />
-          </div>
+            className="relative w-1/2 h-[100vh] hidden lg:block"
+          > */}
+          <Image
+            src="/ss4.svg"
+            alt="Product showcase"
+            width={500}
+            height={500}
+            className="w-1/2 h-full object-cover lg:block hidden"
+          />
+          {/* </div> */}
+        </div>
+
+        <div className="relative">
+          <Image
+            src="/line.svg"
+            alt="Product showcase"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover"
+          />
+          <Image
+            src="/letter.png"
+            alt="Product showcase"
+            width={261}
+            height={84}
+            className="w-[261px] h-[84px] absolute top-[-50px] left-[1%]"
+          />
         </div>
       </div>
 

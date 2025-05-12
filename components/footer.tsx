@@ -15,7 +15,13 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="mb-6 md:mb-0">
-            <Image src="logo.svg" alt="Logo" width={150} height={100} />
+            <Image
+              src="logo.svg"
+              alt="Logo"
+              width={100}
+              height={100}
+              className="w-auto h-auto"
+            />
             <h3 className="text-[24px] font-medium poppins mt-5">
               Sale Easily & Better with us.
             </h3>
