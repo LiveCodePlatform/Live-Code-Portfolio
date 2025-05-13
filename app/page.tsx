@@ -36,11 +36,11 @@ export default function Home() {
 
         <ClientSection />
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <ProductFeatures />
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <ProductFeaturesMobile />
         </div>
 

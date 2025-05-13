@@ -125,8 +125,9 @@ export default function Navbar() {
             >
               Contact
             </Link>
-            <Button>Get Started</Button>
           </nav>
+
+          <Button className="hidden md:block">Get Started</Button>
 
           <button
             className={`md:hidden ${

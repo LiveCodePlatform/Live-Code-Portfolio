@@ -78,15 +78,15 @@ export default function FeatureCarousel() {
 
   return (
     <section
-      className="py-16 md:py-24"
+      className="section py-16 md:py-24 bg-[#151515]"
       data-bgcolor="#151515"
       data-textcolor="#ffffff"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mt-10">
         <div className="w-full">
           <div className=" flex flex-col md:flex-row justify-center items-center mb-20">
             <div>
-              <h2 className=" text-3xl md:text-4xl lg:text-[48px] font-semibold">
+              <h2 className="text-3xl md:text-4xl lg:text-[48px] font-semibold">
                 View all your customer list from live sales
               </h2>
             </div>
@@ -96,14 +96,14 @@ export default function FeatureCarousel() {
           <div className="testimonial-slider mt-10 text-black relative">
             <button
               onClick={handlePrev}
-              className="hidden md:block p-2 rounded-full border border-gray-500 bg-white text-blue hover:bg-slate-100 transition-colors shadow-md absolute top-1/3 left-[-5px] z-10 -translate-y-1/2"
+              className="hidden md:block p-2 rounded-full border border-gray-500 bg-white text-blue hover:bg-slate-100 transition-colors shadow-md absolute top-[30%] left-[-5px] z-10 -translate-y-1/2"
               aria-label="Previous testimonials"
             >
               <ChevronLeft className="w-8 h-8 " />
             </button>
             <button
               onClick={handleNext}
-              className="hidden md:block p-2 rounded-full border border-gray-500 bg-white text-blue hover:bg-slate-100 transition-colors shadow-md absolute top-1/3 right-[-15px] z-10 -translate-y-1/2"
+              className="hidden md:block p-2 rounded-full border border-gray-500 bg-white text-blue hover:bg-slate-100 transition-colors shadow-md absolute top-[30%] right-[-15px] z-10 -translate-y-1/2"
               aria-label="Next testimonials"
             >
               <ChevronRight className="w-8 h-8" />
@@ -111,7 +111,7 @@ export default function FeatureCarousel() {
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-3">
-                  <div className="bg-white rounded-xl shadow-sm px-5 md:px-10 py-10 w-full flex flex-col md:flex-row items-center border border-slate-100 mx-2">
+                  <div className="bg-white rounded-xl shadow-sm px-5 lg:h-[350px] md:px-10 py-10 w-full flex flex-col md:flex-row items-center border border-slate-100 mx-2">
                     <div className="md:w-2/3 md:px-10 order-2 md:order-1 mt-5 md:mt-0">
                       <h1 className="text-[24px] md:text-[32px] lg:text-[48px] font-bold mb-2">
                         {testimonial.name}

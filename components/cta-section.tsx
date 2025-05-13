@@ -81,13 +81,13 @@ export default function CTASection() {
             </div>
           </div>
 
-          <div ref={imageRef} className="relative">
+          <div ref={imageRef} className="relative px-10 pt-10">
             <Image
               src="phone.svg"
               alt="Phone"
               width={600}
               height={500}
-              className="rounded-xl shadow-2xl"
+              className="rounded-xl shadow-2xl w-full"
             />
           </div>
         </div>

@@ -58,7 +58,7 @@ export default function HeroSection() {
         sizes="100vw"
         className="absolute top-0 left-0 w-full h-full object-cover  z-[-1]"
       />
-      <div className="w-full ">
+      <div className="w-full overflow-hidden">
         <div className="flex flex-col lg:flex-row justify-between w-full">
           <div
             ref={contentRef}
@@ -66,9 +66,12 @@ export default function HeroSection() {
           >
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl text-[#151515] lg:text-6xl font-bold leading-tight inter">
-                Live Easily, Live <br /> Better with Live <br /> Code Myanmar
+                Live Easily <br /> Live Better
               </h1>
-
+              <span className="text-[#151515] font-semibold text-[24px]">
+                {" "}
+                with Live Code Myanmar
+              </span>
               <p className="text-lg sm:text-xl text-[#151515] max-w-lg poppins">
                 With a just few simple clicks- mange your live sale stocks, rack
                 live sale orders, save time with our auto replay messages
@@ -86,36 +89,22 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* <div
-            ref={imageRef}
-            className="relative w-1/2 h-[100vh] hidden lg:block"
-          > */}
           <Image
             src="/ss4.svg"
             alt="Product showcase"
             width={500}
             height={500}
-            className="w-1/2 h-full object-cover lg:block hidden"
+            className="w-1/2 h-full object-cover hidden xl:block overflow-hidden"
           />
-          {/* </div> */}
         </div>
 
-        <div className="relative">
-          <Image
-            src="/line.svg"
-            alt="Product showcase"
-            width={1920}
-            height={1080}
-            className="w-full h-full object-cover"
-          />
-          <Image
-            src="/letter.png"
-            alt="Product showcase"
-            width={261}
-            height={84}
-            className="w-[261px] h-[84px] absolute top-[-50px] left-[1%]"
-          />
-        </div>
+        <Image
+          src="/letter.png"
+          alt="Product showcase"
+          width={261}
+          height={84}
+          className="w-[261px] h-[84px] absolute bottom-5 left-[1%]"
+        />
       </div>
 
       {/* Background shapes */}

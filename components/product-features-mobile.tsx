@@ -120,7 +120,7 @@ export default function ProductFeaturesMobile() {
         </div>
         <div
           // ref={featuresRef}
-          className="flex flex-col items-center h-full space-y-10"
+          className="flex flex-col items-center h-full space-y-20"
           // style={{ width: "400%" }}
         >
           {features.map((feature) => (
@@ -129,7 +129,7 @@ export default function ProductFeaturesMobile() {
               className="w-screen h-full flex items-center px-10"
             >
               <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-                <div className="space-y-2 order-1">
+                <div className="space-y-2 order-2">
                   <h3 className="text-[22px] font-bold text-white">
                     {feature.title}
                   </h3>
@@ -140,7 +140,7 @@ export default function ProductFeaturesMobile() {
                     {feature.text}
                   </p>
                 </div>
-                <div className="order-2">
+                <div className="order-1">
                   <Image
                     src={feature.image}
                     alt={feature.title}

@@ -44,7 +44,7 @@ export default function PricingPlans() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-5xl mx-auto">
           {/* Standard Plan */}
           <div className="bg-white rounded-lg py-8 px-10 md:h-[390px]">
             <h3 className="text-[36px] font-bold text-primary mb-6 inter">
