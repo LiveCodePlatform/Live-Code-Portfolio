@@ -43,6 +43,7 @@ const testimonials = [
 
 export default function FeatureCarousel() {
   const sliderRef = useRef<Slider>(null);
+  const [normalizedProgress, setNormalizedProgress] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(3);
 
@@ -72,6 +73,12 @@ export default function FeatureCarousel() {
     pauseOnHover: true,
     arrows: false, // Hide default arrows
     beforeChange: (oldIndex: number, newIndex: number) => {
+      setCurrentSlide(newIndex);
+      const totalSlides = testimonials.length;
+      const progress = (newIndex / (totalSlides - 1)) * 100;
+      setNormalizedProgress(progress);
+    },
+    afterChange: (newIndex: number) => {
       setCurrentSlide(newIndex);
     },
   };
@@ -132,6 +139,14 @@ export default function FeatureCarousel() {
                     </div>
                   </div>
 
+                  {/* Progress bar */}
+                  <div className="md:hidden container mx-auto h-1 mt-10 bg-slate-200 rounded-full mb-8 overflow-hidden">
+                    <div
+                      className="h-full bg-[#305CDE] rounded-full transition-all duration-300"
+                      style={{ width: `${normalizedProgress}%` }}
+                    ></div>
+                  </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
                     <div className="bg-[#1f1f1f] px-7 py-10 rounded-xl font-semibold">
                       <h1 className="text-white text-[22px] mb-5">
@@ -165,14 +180,6 @@ export default function FeatureCarousel() {
               ))}
             </Slider>
           </div>
-
-          {/* Progress bar */}
-          {/* <div className="container mx-auto h-1 mt-10 bg-slate-200 rounded-full mb-8 overflow-hidden">
-            <div
-              className="h-full bg-[#305CDE] rounded-full transition-all duration-300"
-              style={{ width: `${normalizedProgress}%` }}
-            ></div>
-          </div> */}
         </div>
       </div>
 

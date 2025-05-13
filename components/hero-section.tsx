@@ -56,7 +56,14 @@ export default function HeroSection() {
         alt="Product showcase"
         fill
         sizes="100vw"
-        className="absolute top-0 left-0 w-full h-full object-cover  z-[-1]"
+        className="absolute hidden md:block top-0 left-0 w-full h-full object-cover z-[-1]"
+      />
+      <Image
+        src="/mobilehero.svg"
+        alt="Product showcase"
+        fill
+        sizes="100vw"
+        className="absolute md:hidden top-0 left-0 w-full h-full object-cover z-[-1]"
       />
       <div className="w-full overflow-hidden">
         <div className="flex flex-col lg:flex-row justify-between w-full">
@@ -103,7 +110,7 @@ export default function HeroSection() {
           alt="Product showcase"
           width={261}
           height={84}
-          className="w-[261px] h-[84px] absolute bottom-5 left-[1%]"
+          className="hidden md:block w-[261px] h-[84px] absolute bottom-5 left-[1%]"
         />
       </div>
 

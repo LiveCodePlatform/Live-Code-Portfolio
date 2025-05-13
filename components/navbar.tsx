@@ -54,7 +54,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           <Link
             href="/"
             className={`text-2xl font-bold ${
@@ -72,7 +72,7 @@ export default function Navbar() {
                   ? "text-primary"
                   : isDarkSection
                   ? "text-white hover:text-primary"
-                  : "text-black hover:text-primary"
+                  : "text-black hover:text-primary hover:opacity-100 opacity-50"
               }`}
             >
               Home
@@ -84,7 +84,7 @@ export default function Navbar() {
                   ? "text-primary"
                   : isDarkSection
                   ? "text-white hover:text-primary"
-                  : "text-black hover:text-primary"
+                  : "text-black hover:text-primary hover:opacity-100 opacity-50"
               }`}
             >
               About Live Code
@@ -96,7 +96,7 @@ export default function Navbar() {
                   ? "text-primary"
                   : isDarkSection
                   ? "text-white hover:text-primary"
-                  : "text-black hover:text-primary"
+                  : "text-black hover:text-primary hover:opacity-100 opacity-50"
               }`}
             >
               Features
@@ -108,7 +108,7 @@ export default function Navbar() {
                   ? "text-primary"
                   : isDarkSection
                   ? "text-white hover:text-primary"
-                  : "text-black hover:text-primary"
+                  : "text-black hover:text-primary hover:opacity-100 opacity-50"
               }`}
             >
               Packages
@@ -120,14 +120,14 @@ export default function Navbar() {
                   ? "text-primary"
                   : isDarkSection
                   ? "text-white hover:text-primary"
-                  : "text-black hover:text-primary"
+                  : "text-black hover:text-primary hover:opacity-100 opacity-50"
               }`}
             >
               Contact
             </Link>
           </nav>
 
-          <Button className="hidden md:block">Get Started</Button>
+          <Button className="hidden md:block">Consult with us</Button>
 
           <button
             className={`md:hidden ${
