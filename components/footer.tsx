@@ -36,13 +36,13 @@ export default function Footer() {
                 About Live Code
               </Link>
               <Link
-                href="/features"
+                href="/feature"
                 className="text-white hover:text-gray-300 font-medium text-[14px] transition-colors"
               >
                 Features
               </Link>
               <Link
-                href="/packages"
+                href="/plan"
                 className="text-white hover:text-gray-300 font-medium text-[14px] transition-colors"
               >
                 Packages
