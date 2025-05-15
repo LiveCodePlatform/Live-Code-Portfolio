@@ -120,3 +120,18 @@ html {
 .product-features-section * {
   transition: color 0.5s ease;
 }
+
+.scroll-section-outer {
+  overflow: hidden;
+
+  /* height: 100vh; */
+}
+
+.scroll-section-inner {
+  background-color: red;
+  height: 50vh;
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}

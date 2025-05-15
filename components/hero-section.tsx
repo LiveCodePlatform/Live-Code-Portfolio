@@ -52,7 +52,7 @@ export default function HeroSection() {
       data-textcolor="#000000"
     >
       <Image
-        src="/hero-section.svg"
+        src="/background.svg"
         alt="Product showcase"
         fill
         sizes="100vw"
@@ -97,7 +97,7 @@ export default function HeroSection() {
           </div>
 
           <Image
-            src="/ss4.svg"
+            src="/herobanner.svg"
             alt="Product showcase"
             width={500}
             height={500}

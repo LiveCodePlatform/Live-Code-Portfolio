@@ -59,7 +59,6 @@ export default function ClientSection() {
             style={{
               width: "100%",
               height: "auto",
-              backgroundColor: "#5D4037",
             }}
           />
         </div>
