@@ -11,6 +11,7 @@ import CTASection from "@/components/cta-section";
 import { initScrollColorChange } from "@/lib/scroll-color";
 import PricingPlan from "@/components/pricing-plan";
 import ProductFeaturesMobile from "@/components/product-features-mobile";
+import HeroSectionMobile from "@/components/hero-section-mobile";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,13 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <HeroSection />
+        <div className="hidden lg:block">
+          <HeroSection />
+        </div>
+
+        <div className="lg:hidden">
+          <HeroSectionMobile />
+        </div>
 
         <ClientSection />
 

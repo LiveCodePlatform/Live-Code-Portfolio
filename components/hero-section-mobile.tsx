@@ -1,55 +1,14 @@
 "use client";
-
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
-export default function HeroSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Parallax effect for the hero image
-    if (imageRef.current) {
-      gsap.to(imageRef.current, {
-        y: 100,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-    }
-
-    // Animate content on load
-    if (contentRef.current) {
-      gsap.from(contentRef.current.children, {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-      });
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
+export default function HeroSectionMobile() {
   return (
     <section
       // ref={sectionRef}
       className="section min-h-screen flex items-center relative overflow-hidden"
       style={{
-        backgroundImage: "url('/background.svg')",
+        backgroundImage: "url('/mobilehero.svg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

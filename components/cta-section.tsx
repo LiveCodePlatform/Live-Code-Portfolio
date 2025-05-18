@@ -1,46 +1,10 @@
 "use client";
-
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function CTASection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Animate content on scroll
-    if (contentRef.current) {
-      gsap.from(contentRef.current.children, {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
-      });
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   return (
-    <section
-      ref={sectionRef}
-      className="section pt-24 md:pt-32 relative overflow-hidden"
-      data-bgcolor="#151515"
-      data-textcolor="#ffffff"
-    >
+    <section className="section pt-24 md:pt-32 relative overflow-hidden">
       {/* Background gradient */}
       <Image
         src="/ctabg.svg"
@@ -59,7 +23,7 @@ export default function CTASection() {
 
       <div className="container mx-auto px-4 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div ref={contentRef} className="space-y-6">
+          <div className="space-y-6">
             <h1 className="text-4xl text-white sm:text-5xl lg:text-6xl font-bold leading-tight inter">
               Get In Touch
             </h1>
@@ -81,7 +45,7 @@ export default function CTASection() {
             </div>
           </div>
 
-          <div ref={imageRef} className="relative px-0 md:px-10 pt-10 ">
+          <div className="relative px-0 md:px-10 pt-10 ">
             <Image
               src="phone.svg"
               alt="Phone"
