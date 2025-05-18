@@ -13,7 +13,6 @@ export default function AboutBanner() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Parallax effect for the hero image
     if (imageRef.current) {
       gsap.to(imageRef.current, {
         y: 100,
@@ -31,9 +30,9 @@ export default function AboutBanner() {
       gsap.from(contentRef.current.children, {
         y: 50,
         opacity: 0,
-        duration: 1,
+        duration: 0.5,
         stagger: 0.2,
-        ease: "power3.out",
+        ease: "power3.out ease-in-out",
       });
     }
 
@@ -46,18 +45,18 @@ export default function AboutBanner() {
     <section
       ref={sectionRef}
       className="section min-h-screen flex items-center pt-20 relative overflow-hidden"
-      data-bgcolor="#151515"
-      data-textcolor="#ffffff"
+      style={{
+        backgroundImage: "url('/ctabg.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <Image
-        src="/ctabg.svg"
-        alt="About Banner"
-        fill
-        className="object-cover"
-        sizes="100vw"
-      />
       <div className="container mx-auto px-4 min-h-[calc(100vh-12rem)] flex items-center">
-        <div className="max-w-5xl mx-auto text-center" ref={contentRef}>
+        <div
+          className="max-w-5xl mx-auto text-center text-white"
+          ref={contentRef}
+        >
           <p className="text-4xl md:text-5xl lg:text-[48px] leading-[1.2] font-semibold">
             At Live Code Myanmar, we turn <br /> your facebook live chaos into
             calm
