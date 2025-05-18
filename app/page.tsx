@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
 import ClientSection from "@/components/client-section";
 import TestmonialSection from "@/components/testmonial-section";
-import ProductFeatures from "@/components/product-features";
+import ProductFeatures from "@/components/product-features-copy";
 import CTASection from "@/components/cta-section";
 import { initScrollColorChange } from "@/lib/scroll-color";
 import PricingPlan from "@/components/pricing-plan";
